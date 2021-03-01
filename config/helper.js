@@ -8,7 +8,6 @@ exports.routerWrapper = (controller, ...args) => {
     ));
 
     try {
-      console.log(values);
       let fireController = await controller(...values);
       res.status(200).send(fireController);
     } catch (err) {
